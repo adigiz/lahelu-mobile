@@ -1,11 +1,30 @@
-import { Button, FlatList, Image, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import date from "@/utils/date";
 import PostTag from "./PostTag";
 import VideoPlayer from "./VideoPlayer";
 
-export default function Post({ item }) {
+interface PostProps {
+    item: {
+        type: string;
+        title: string;
+        user: {
+            username: string;
+            image_url: string;
+        };
+        file_url: string;
+        uploaded_date: string;
+        tags: string[];
+        analytics: {
+            upvote: number;
+            total_comments: number;
+        };
+    };
+    isVisible: boolean;
+}
+
+export default function Post({ item, isVisible }: PostProps) {
     const isVideo = item.type === "video"
     return (
         <View className="w-full py-[10] bg-white">
@@ -21,7 +40,7 @@ export default function Post({ item }) {
             </View>
             <View className="flex">
                 <Text className="px-[10] text-lg font-semibold">{item.title}</Text>
-                {isVideo ? <VideoPlayer source={item.file_url} /> : <Image source={{ uri: item.file_url }} className="w-full aspect-square" />}
+                {isVideo ? <VideoPlayer uri={item.file_url} isPlaying={isVisible} /> : <Image source={{ uri: item.file_url }} className="w-full aspect-square" />}
             </View>
             <View className="flex flex-row p-[10]">
                 <FlatList
