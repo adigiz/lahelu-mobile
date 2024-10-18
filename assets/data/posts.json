@@ -20,7 +20,7 @@
     "id": "2",
     "type": "video",
     "uploaded_date": "2024-10-17T14:45:00Z",
-    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/videos/2.mp4",
+    "file_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     "title": "Hari yang buruk",
     "tags": ["sawer", "funny", "relatable"],
     "user": {

@@ -1,12 +1,12 @@
 import { Button, FlatList, Image, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-
-
 import date from "@/utils/date";
 import PostTag from "./PostTag";
+import VideoPlayer from "./VideoPlayer";
 
 export default function Post({ item }) {
+    const isVideo = item.type === "video"
     return (
         <View className="w-full py-[10] bg-white">
             <View className="flex flex-row items-center px-[10] pb-[10]">
@@ -21,19 +21,17 @@ export default function Post({ item }) {
             </View>
             <View className="flex">
                 <Text className="px-[10] text-lg font-semibold">{item.title}</Text>
-                <Image source={{ uri: item.file_url }}
-                    className="w-full aspect-square" />
+                {isVideo ? <VideoPlayer source={item.file_url} /> : <Image source={{ uri: item.file_url }} className="w-full aspect-square" />}
             </View>
             <View className="flex flex-row p-[10]">
                 <FlatList
-                    contentContainerStyle={{gap: 5}}
-                    data={item.tags}  // Array of tags
+                    contentContainerStyle={{ gap: 5 }}
+                    data={item.tags}
                     renderItem={({ item }) => <PostTag tag={item} />}
-                    keyExtractor={(item, index) => index.toString()}  // Ensure unique key
-                    horizontal  // Make it scroll vertically
-                    showsHorizontalScrollIndicator={false} // Limit height for the FlatList
+                    keyExtractor={(item, index) => index.toString()}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
                 />
-                {/* {item.tags.map((tag) => (<PostTag tag={tag} />))} */}
             </View>
             <View className="px-[10] flex flex-row justify-between">
                 <View className="flex flex-row gap-[8]">
