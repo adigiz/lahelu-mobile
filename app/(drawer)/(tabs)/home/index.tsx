@@ -1,7 +1,8 @@
-import { FlatList, View, ListRenderItemInfo, ViewToken } from 'react-native';
-import { useRef, useState } from 'react';
-import Post from '@/components/Post';
+import { useCallback,useRef, useState } from 'react';
+import { ActivityIndicator,FlatList, ListRenderItemInfo, View, ViewToken } from 'react-native';
+
 import posts from "@/assets/data/posts.json";
+import Post from '@/components/Post';
 
 interface PostItem {
   id: string;
@@ -22,6 +23,8 @@ interface PostItem {
 
 export default function HomeScreen() {
   const [visiblePostIndex, setVisiblePostIndex] = useState<number | null>(null);
+  const [data, setData] = useState<PostItem[]>(posts as PostItem[]);
+  const [loading, setLoading] = useState(false);
   const flatListRef = useRef<FlatList<PostItem>>(null);
 
   const onViewableItemsChanged = useRef(({ viewableItems }: { viewableItems: ViewToken<PostItem>[] }) => {
@@ -32,22 +35,45 @@ export default function HomeScreen() {
   }).current;
 
   const viewabilityConfig = {
-    itemVisiblePercentThreshold: 50,
+    itemVisiblePercentThreshold: 100,
+  };
+
+  const loadMorePosts = useCallback(async () => {
+    if (loading) return;
+    
+    setLoading(true);
+    
+    const newPosts: PostItem[] = await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(posts as PostItem[]);
+      }, 1500);
+    });
+
+    setData(prevData => [...prevData, ...newPosts]);
+    setLoading(false);
+  }, [loading]);
+
+  const renderFooter = () => {
+    if (!loading) return null;
+    return <ActivityIndicator size="large" color="#0000ff" />;
   };
 
   return (
-    <View className="px-2 gap-[4]">
+    <View className="gap-[4] px-2">
       <FlatList
         ref={flatListRef}
-        data={posts as PostItem[]}
-        renderItem={({ item, index }) => (
+        data={data}
+        renderItem={({ item, index }: ListRenderItemInfo<PostItem>) => (
           <Post item={item} isVisible={index === visiblePostIndex} />
         )}
-        keyExtractor={(_, index) => index.toString()}
+        keyExtractor={(item) => item.id}
         contentContainerStyle={{ gap: 4 }}
         showsVerticalScrollIndicator={false}
         onViewableItemsChanged={onViewableItemsChanged}
         viewabilityConfig={viewabilityConfig}
+        onEndReached={loadMorePosts}
+        onEndReachedThreshold={0.5}
+        ListFooterComponent={renderFooter}
       />
     </View>
   );

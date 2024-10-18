@@ -1,6 +1,6 @@
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
 import { StyleSheet, Text } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 function HeaderLeft() {
     return (<Text style={styles.titleText}>Lahelu</Text>)

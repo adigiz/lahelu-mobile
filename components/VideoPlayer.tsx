@@ -1,7 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
-import { View, StyleSheet, Button, TouchableOpacity } from 'react-native';
-import { Video, ResizeMode, AVPlaybackStatus } from 'expo-av';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { ResizeMode,Video } from 'expo-av';
+import { useEffect,useRef } from 'react';
+import { StyleSheet,View } from 'react-native';
 
 interface VideoPlayerProps {
     uri: string;
@@ -10,7 +9,6 @@ interface VideoPlayerProps {
 
 export default function VideoPlayer({ uri, isPlaying }: VideoPlayerProps) {
     const video = useRef<Video>(null);
-    const [status, setStatus] = useState<AVPlaybackStatus | null>(null);
 
     useEffect(() => {
         if (video.current) {
@@ -31,7 +29,6 @@ export default function VideoPlayer({ uri, isPlaying }: VideoPlayerProps) {
                 useNativeControls
                 resizeMode={ResizeMode.CONTAIN}
                 isLooping
-                onPlaybackStatusUpdate={(status) => setStatus(status)}
             />
         </View>
     );

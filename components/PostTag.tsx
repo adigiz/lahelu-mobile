@@ -26,7 +26,7 @@ export default function PostTag({ tag }: PostTagProps) {
     return (
         <TouchableOpacity activeOpacity={0.7}>
             <View
-                className={`px-[10] py-[3] rounded-full overflow-hidden font-semibold border ${getBorderColor(
+                className={`overflow-hidden rounded-full border px-[10] py-[3] font-semibold ${getBorderColor(
                     tag
                 )} ${getTagColor(tag)}`}
             >
