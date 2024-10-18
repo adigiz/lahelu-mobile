@@ -1,7 +1,9 @@
-import { ThemedText } from "@/components/ThemedText";
+import { Text, View } from "react-native";
 
 export default function JoinPage() {
     return (
-        <ThemedText>Hehe</ThemedText>
+        <View>
+            <Text>Join</Text>
+        </View>
     )
 }
