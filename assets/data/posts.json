@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+    "type": "image",
+    "uploaded_date": "2024-10-17T14:30:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "title": "Mengapa ku selalu salah",
+    "tags": ["sawer", "funny", "relatable", "haha", "itsmy jam", "understandable"],
+    "user": {
+      "id": "u1",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
+      "username": "vadimnotjustdev"
+    },
+    "analytics": {
+      "upvote": 88,
+      "total_comments": 3
+    }
+  },
+  {
+    "id": "2",
+    "type": "video",
+    "uploaded_date": "2024-10-17T14:45:00Z",
+    "file_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "title": "Hari yang buruk",
+    "tags": ["sawer", "funny", "relatable"],
+    "user": {
+      "id": "u2",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
+      "username": "johnsmith"
+    },
+    "analytics": {
+      "upvote": 56,
+      "total_comments": 1
+    }
+  },
+  {
+    "id": "3",
+    "type": "image",
+    "uploaded_date": "2024-10-17T15:00:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "title": "Tawa adalah obat",
+    "tags": ["funny", "haha", "itsmy jam"],
+    "user": {
+      "id": "u3",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
+      "username": "jane_doe"
+    },
+    "analytics": {
+      "upvote": 92,
+      "total_comments": 5
+    }
+  },
+  {
+    "id": "4",
+    "type": "video",
+    "uploaded_date": "2024-10-17T15:15:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/videos/4.mp4",
+    "title": "Saatnya bersenang-senang",
+    "tags": ["sawer", "relatable"],
+    "user": {
+      "id": "u4",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/5.jpg",
+      "username": "alex_90"
+    },
+    "analytics": {
+      "upvote": 45,
+      "total_comments": 2
+    }
+  },
+  {
+    "id": "5",
+    "type": "image",
+    "uploaded_date": "2024-10-17T15:30:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "title": "Canda yang menyentuh",
+    "tags": ["funny", "understandable"],
+    "user": {
+      "id": "u5",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/6.jpg",
+      "username": "sarah_connor"
+    },
+    "analytics": {
+      "upvote": 78,
+      "total_comments": 4
+    }
+  },
+  {
+    "id": "6",
+    "type": "video",
+    "uploaded_date": "2024-10-17T15:45:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/videos/6.mp4",
+    "title": "Kenangan lucu",
+    "tags": ["sawer", "relatable", "haha"],
+    "user": {
+      "id": "u6",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/7.jpg",
+      "username": "mike_tyson"
+    },
+    "analytics": {
+      "upvote": 66,
+      "total_comments": 2
+    }
+  },
+  {
+    "id": "7",
+    "type": "image",
+    "uploaded_date": "2024-10-17T16:00:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "title": "Ketika semua berjalan salah",
+    "tags": ["funny", "relatable", "itsmy jam"],
+    "user": {
+      "id": "u7",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.jpg",
+      "username": "lisa_simpson"
+    },
+    "analytics": {
+      "upvote": 54,
+      "total_comments": 1
+    }
+  },
+  {
+    "id": "8",
+    "type": "video",
+    "uploaded_date": "2024-10-17T16:15:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/videos/8.mp4",
+    "title": "Senyum di tengah kesedihan",
+    "tags": ["sawer", "haha", "understandable"],
+    "user": {
+      "id": "u8",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/9.jpg",
+      "username": "tom_jones"
+    },
+    "analytics": {
+      "upvote": 34,
+      "total_comments": 0
+    }
+  },
+  {
+    "id": "9",
+    "type": "image",
+    "uploaded_date": "2024-10-17T16:30:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "title": "Saat lucu itu",
+    "tags": ["funny", "relatable", "itsmy jam"],
+    "user": {
+      "id": "u9",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/10.jpg",
+      "username": "david_bowie"
+    },
+    "analytics": {
+      "upvote": 90,
+      "total_comments": 3
+    }
+  },
+  {
+    "id": "10",
+    "type": "video",
+    "uploaded_date": "2024-10-17T16:45:00Z",
+    "file_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/videos/10.mp4",
+    "title": "Kisah yang menginspirasi",
+    "tags": ["sawer", "funny", "understandable"],
+    "user": {
+      "id": "u10",
+      "image_url": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/11.jpg",
+      "username": "julia_lee"
+    },
+    "analytics": {
+      "upvote": 77,
+      "total_comments": 2
+    }
+  }
+]
