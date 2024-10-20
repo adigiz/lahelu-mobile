@@ -22,7 +22,7 @@ const getBorderColor = (tag: string): string => {
   }
 };
 
-export default function PostTag({ tag }: PostTagProps) {
+const PostTag = ({ tag }: PostTagProps) => {
   return (
     <TouchableOpacity activeOpacity={0.7}>
       <View
@@ -35,3 +35,5 @@ export default function PostTag({ tag }: PostTagProps) {
     </TouchableOpacity>
   );
 }
+
+export default PostTag

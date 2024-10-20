@@ -3,11 +3,11 @@ import { Image } from 'react-native';
 import Animated, { SharedValue, useAnimatedStyle } from 'react-native-reanimated';
 
 
-type Props = {
+type CaretProps = {
   progress: Readonly<SharedValue<0 | 1>>;
 };
 
-const Caret = ({ progress }: Props) => {
+const Caret = ({ progress }: CaretProps) => {
   const iconStyle = useAnimatedStyle(() => ({
     transform: [{ rotate: `${progress.value * -180}deg` }],
   }));
