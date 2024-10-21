@@ -26,7 +26,7 @@ interface PostProps {
   isVisible: boolean;
 }
 
-export default function Post({ item, isVisible }: PostProps) {
+const Post = ({ item, isVisible }: PostProps) => {
   const isVideo = item.type === "video"
   return (
     <View className="w-full bg-white py-[10]">
@@ -90,3 +90,5 @@ export default function Post({ item, isVisible }: PostProps) {
     </View>
   )
 }
+
+export default Post

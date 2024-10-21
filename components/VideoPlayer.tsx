@@ -7,7 +7,7 @@ interface VideoPlayerProps {
   isPlaying: boolean;
 }
 
-export default function VideoPlayer({ uri, isPlaying }: VideoPlayerProps) {
+const VideoPlayer = ({ uri, isPlaying }: VideoPlayerProps) => {
   const video = useRef<Video>(null);
 
   useEffect(() => {
@@ -46,3 +46,5 @@ const styles = StyleSheet.create({
     height: 200,
   }
 });
+
+export default VideoPlayer

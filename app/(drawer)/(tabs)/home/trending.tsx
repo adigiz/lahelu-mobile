@@ -1,6 +1,6 @@
-import { Text,View } from 'react-native';
+import { Text, View } from 'react-native';
 
-export default function TrendingPage() {
+export default function TrendingScreen() {
   return (
     <View>
       <Text>Trending</Text>
